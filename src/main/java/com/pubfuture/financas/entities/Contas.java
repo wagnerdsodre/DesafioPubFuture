@@ -1,23 +1,22 @@
 package com.pubfuture.financas.entities;
 
 import com.pubfuture.financas.enums.TipoConta;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import javax.persistence.*;
 
-@Entity
+
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Contas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private Float Saldo;
+    private Double Saldo;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

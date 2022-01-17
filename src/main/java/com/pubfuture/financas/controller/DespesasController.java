@@ -1,7 +1,7 @@
 package com.pubfuture.financas.controller;
 
-import com.pubfuture.financas.entities.User;
-import com.pubfuture.financas.services.UserService;
+import com.pubfuture.financas.entities.Despesas;
+import com.pubfuture.financas.services.DespesasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,24 +12,29 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/users/")
-public class UserController {
+@RequestMapping(value = "/api/v1/despesas/")
+public class DespesasController {
+
 
     @Autowired
-    private UserService serviceuser;
+    private DespesasService service;
 
     @GetMapping
-    public ResponseEntity<List<User>> findAll() {
-        List<User> list = serviceuser.findAll();
+    public ResponseEntity<List<Despesas>> findAll() {
+        List<Despesas> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 
-    @GetMapping(value = "/users/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id) {
-        User obj = serviceuser.findById(id);
+    @GetMapping(value = "/api/v1/despesas/{id}")
+    public ResponseEntity<Despesas> findById(@PathVariable Long id) {
+        Despesas obj = service.findById(id);
         return ResponseEntity.ok().body(obj);
 
     }
+
+
+
+
 
 
 }
