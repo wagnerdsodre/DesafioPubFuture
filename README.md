@@ -5,6 +5,10 @@ Dependências: Spring Web, H2, Project Lombok,JPA.
 CRUD de Receita, Despesas e Conta (Inserção, Update, Exclusão e Listagem por ID e Geral).
 Deploy execurando no Heroku (https://api-financas-pubfuture.herokuapp.com/api/v1/)
 
+End Points
+https://api-financas-pubfuture.herokuapp.com/api/v1/contas
+https://api-financas-pubfuture.herokuapp.com/api/v1/despesas/
+
 mvn spring-boot:run 
 Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
 
