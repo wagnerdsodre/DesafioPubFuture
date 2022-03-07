@@ -1,13 +1,12 @@
-# desafiopubfuture
-Projeto de API Desafio PubFuture
-Desenvolvido com Spring Boot 2.5.3
+# Projeto finanças API
+Projeto de API desenvolvido com Spring Boot 2.5.3
 Dependências: Spring Web, H2, Project Lombok,JPA.
 CRUD de Receita, Despesas e Conta (Inserção, Update, Exclusão e Listagem por ID e Geral).
-Deploy executando no Heroku:<br/> (https://api-financas-pubfuture.herokuapp.com/api/v1/)
+Deploy executando em:<br/> (http://localhost:8080/api/v1/)
 
 End Points:<br/>
-https://api-financas-pubfuture.herokuapp.com/api/v1/contas <br/>
-https://api-financas-pubfuture.herokuapp.com/api/v1/despesas/
+http://localhost:8080/api/v1/contas <br/>
+http://localhost:8080/api/v1/despesas/
 
 mvn spring-boot:run 
 Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
